@@ -1,0 +1,308 @@
+{
+	"info": {
+		"_postman_id": "2b4a3b05-1422-40b7-bbe8-e68fe3882c29",
+		"name": "FlutterAssignmentBackend",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27526921",
+		"_collection_link": "https://blue-space-250299.postman.co/workspace/58747140-9e6c-4299-87be-aee2db42cca4/collection/27526921-2b4a3b05-1422-40b7-bbe8-e68fe3882c29?action=share&source=collection_link&creator=27526921"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "OtpCreate",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"countryCode\": 91,\n    \"mobileNumber\": 9649876112\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://40.90.224.241:5000/login/otpCreate",
+							"protocol": "http",
+							"host": [
+								"40",
+								"90",
+								"224",
+								"241"
+							],
+							"port": "5000",
+							"path": [
+								"login",
+								"otpCreate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "OtpValidate",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"countryCode\": 91,\n    \"mobileNumber\": 9649876112,\n    \"otp\": 6112 // The OTP will be the last 4 digits of the number\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://40.90.224.241:5000/login/otpValidate",
+							"protocol": "http",
+							"host": [
+								"40",
+								"90",
+								"224",
+								"241"
+							],
+							"port": "5000",
+							"path": [
+								"login",
+								"otpValidate"
+							]
+						},
+						"description": "To validate the numbers please use the last 4 digits of mobile number as otp"
+					},
+					"response": []
+				},
+				{
+					"name": "isLoggedIn",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://40.90.224.241:5000/isLoggedIn",
+							"protocol": "http",
+							"host": [
+								"40",
+								"90",
+								"224",
+								"241"
+							],
+							"port": "5000",
+							"path": [
+								"isLoggedIn"
+							]
+						},
+						"description": "This api is used to fetch the user data, csrf token and cookie which will be used in API's for authentication.\n\nWithout the cookie and csrf token you won't be able to perform User authenticated API's"
+					},
+					"response": []
+				},
+				{
+					"name": "logout",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-Csrf-Token",
+								"value": "c12db608-70c2-45d6-9a60-798222c8b38e",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://40.90.224.241:5000/logout",
+							"protocol": "http",
+							"host": [
+								"40",
+								"90",
+								"224",
+								"241"
+							],
+							"port": "5000",
+							"path": [
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateUser",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Csrf-Token",
+								"value": "c12db608-70c2-45d6-9a60-798222c8b38e",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"countryCode\": 91,\n    \"userName\": \"Abhinav212\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://40.90.224.241:5000/update",
+							"protocol": "http",
+							"host": [
+								"40",
+								"90",
+								"224",
+								"241"
+							],
+							"port": "5000",
+							"path": [
+								"update"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Home",
+			"item": [
+				{
+					"name": "Faqs",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://40.90.224.241:5000/faq",
+							"protocol": "http",
+							"host": [
+								"40",
+								"90",
+								"224",
+								"241"
+							],
+							"port": "5000",
+							"path": [
+								"faq"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FetchProducts",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"filter\": {\n        \"condition\": [\n            \"Like New\",\n            \"Fair\"\n        ],\n        \"make\": [\n            \"Samsung\"\n        ],\n        \"storage\": [\n            \"16 GB\",\n            \"32 GB\"\n        ],\n        \"ram\": [\n            \"4 GB\"\n        ],\n        \"warranty\": [\n            \"Brand Warranty\",\n            \"Seller Warranty\"\n        ],\n        \"priceRange\": [\n            40000,\n            175000\n        ],\n        \"verified\": true,\n        \"sort\": {\n            // \"date\": -1, -> For Latest \n            // Empty for Value For Money\n            // \"views\": -1 -> for views\n            // \"price\": -1, Price High To Low\n            // \"price\": 1, Price Low To High\n        },\n        \"page\": 1\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://40.90.224.241:5000/filter",
+							"protocol": "http",
+							"host": [
+								"40",
+								"90",
+								"224",
+								"241"
+							],
+							"port": "5000",
+							"path": [
+								"filter"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LikeProduct",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Csrf-Token",
+								"value": "c12db608-70c2-45d6-9a60-798222c8b38e",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"listingId\": \"\",\n    \"isFav\": true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://40.90.224.241:5000/favs",
+							"protocol": "http",
+							"host": [
+								"40",
+								"90",
+								"224",
+								"241"
+							],
+							"port": "5000",
+							"path": [
+								"favs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "fetchBrands",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://40.90.224.241:5000/makeWithImages",
+							"protocol": "http",
+							"host": [
+								"40",
+								"90",
+								"224",
+								"241"
+							],
+							"port": "5000",
+							"path": [
+								"makeWithImages"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "fetchFilters",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://40.90.224.241:5000/showSearchFilters",
+							"protocol": "http",
+							"host": [
+								"40",
+								"90",
+								"224",
+								"241"
+							],
+							"port": "5000",
+							"path": [
+								"showSearchFilters"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
