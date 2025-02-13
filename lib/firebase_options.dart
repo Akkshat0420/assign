@@ -41,48 +41,48 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyA1wZCU_dTCmBlsGzZ1QfxGgrlD3Fj3_DU',
-    appId: '1:505782275497:web:1ee545595236285b0d08b8',
-    messagingSenderId: '505782275497',
-    projectId: 'asfire-852f0',
-    authDomain: 'asfire-852f0.firebaseapp.com',
-    storageBucket: 'asfire-852f0.firebasestorage.app',
-    measurementId: 'G-NDL985L2N6',
+    // apiKey: 'AIzaSyA1wZCU_dTCmBlsGzZ1QfxGgrlD3Fj3_DU',
+    // appId: '1:505782275497:web:1ee545595236285b0d08b8',
+    // messagingSenderId: '505782275497',
+    // projectId: 'asfire-852f0',
+    // authDomain: 'asfire-852f0.firebaseapp.com',
+    // storageBucket: 'asfire-852f0.firebasestorage.app',
+    // measurementId: 'G-NDL985L2N6',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyBvXn7B0vXq6Hf-ipeaWndCiVP5LrvT1l0',
-    appId: '1:505782275497:android:58b5ccf194f1c2be0d08b8',
-    messagingSenderId: '505782275497',
-    projectId: 'asfire-852f0',
-    storageBucket: 'asfire-852f0.firebasestorage.app',
+    // apiKey: 'AIzaSyBvXn7B0vXq6Hf-ipeaWndCiVP5LrvT1l0',
+    // appId: '1:505782275497:android:58b5ccf194f1c2be0d08b8',
+    // messagingSenderId: '505782275497',
+    // projectId: 'asfire-852f0',
+    // storageBucket: 'asfire-852f0.firebasestorage.app',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyCr4zL1xIARP52rvX0NUoVDP95qpF_-ms0',
-    appId: '1:505782275497:ios:6bc9cab4ef5e578d0d08b8',
-    messagingSenderId: '505782275497',
-    projectId: 'asfire-852f0',
-    storageBucket: 'asfire-852f0.firebasestorage.app',
-    iosBundleId: 'com.example.assign',
+    // apiKey: 'AIzaSyCr4zL1xIARP52rvX0NUoVDP95qpF_-ms0',
+    // appId: '1:505782275497:ios:6bc9cab4ef5e578d0d08b8',
+    // messagingSenderId: '505782275497',
+    // projectId: 'asfire-852f0',
+    // storageBucket: 'asfire-852f0.firebasestorage.app',
+    // iosBundleId: 'com.example.assign',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyCr4zL1xIARP52rvX0NUoVDP95qpF_-ms0',
-    appId: '1:505782275497:ios:6bc9cab4ef5e578d0d08b8',
-    messagingSenderId: '505782275497',
-    projectId: 'asfire-852f0',
-    storageBucket: 'asfire-852f0.firebasestorage.app',
-    iosBundleId: 'com.example.assign',
+    // apiKey: 'AIzaSyCr4zL1xIARP52rvX0NUoVDP95qpF_-ms0',
+    // appId: '1:505782275497:ios:6bc9cab4ef5e578d0d08b8',
+    // messagingSenderId: '505782275497',
+    // projectId: 'asfire-852f0',
+    // storageBucket: 'asfire-852f0.firebasestorage.app',
+    // iosBundleId: 'com.example.assign',
   );
 
   static const FirebaseOptions windows = FirebaseOptions(
-    apiKey: 'AIzaSyA1wZCU_dTCmBlsGzZ1QfxGgrlD3Fj3_DU',
-    appId: '1:505782275497:web:f1f8a14ace714f1f0d08b8',
-    messagingSenderId: '505782275497',
-    projectId: 'asfire-852f0',
-    authDomain: 'asfire-852f0.firebaseapp.com',
-    storageBucket: 'asfire-852f0.firebasestorage.app',
-    measurementId: 'G-JBMXNHV0D9',
+    // apiKey: 'AIzaSyA1wZCU_dTCmBlsGzZ1QfxGgrlD3Fj3_DU',
+    // appId: '1:505782275497:web:f1f8a14ace714f1f0d08b8',
+    // messagingSenderId: '505782275497',
+    // projectId: 'asfire-852f0',
+    // authDomain: 'asfire-852f0.firebaseapp.com',
+    // storageBucket: 'asfire-852f0.firebasestorage.app',
+    // measurementId: 'G-JBMXNHV0D9',
   );
 }
